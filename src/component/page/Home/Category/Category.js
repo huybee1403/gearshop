@@ -4,8 +4,9 @@ import "./Category.css"
 
 const Category = () => {
     return (
-        <div className="category mt-4">
-            <h1 className="title mb-5">SHOP BY CATEGORY</h1>
+        <div className="category">
+            <h1 className="title">SHOP BY CATEGORIES</h1>
+            <h4 className="desc mb-5">Let Choose Your Best Gear</h4>
             <Container fluid>
                 <Row>
                     <Col lg={3} md={6} className="mb-5">
@@ -14,7 +15,7 @@ const Category = () => {
                             <div className="cate-content">
                                 <h4 className="cate-title">Keyboards Gaming</h4>
                                 <p>
-                                    Shop now <i class="fa-solid fa-arrow-right"></i>
+                                    Shop now <i className="fa-solid fa-arrow-right"></i>
                                 </p>
                             </div>
                         </div>
@@ -25,7 +26,7 @@ const Category = () => {
                             <div className="cate-content">
                                 <h4 className="cate-title">Gaming Mouse</h4>
                                 <p>
-                                    Shop now <i class="fa-solid fa-arrow-right"></i>
+                                    Shop now <i className="fa-solid fa-arrow-right"></i>
                                 </p>
                             </div>
                         </div>
@@ -36,7 +37,7 @@ const Category = () => {
                             <div className="cate-content">
                                 <h4 className="cate-title">Headphones</h4>
                                 <p>
-                                    Shop now <i class="fa-solid fa-arrow-right"></i>
+                                    Shop now <i className="fa-solid fa-arrow-right"></i>
                                 </p>
                             </div>
                         </div>
@@ -48,7 +49,7 @@ const Category = () => {
                                 <h4 className="cate-title">Gaming Controllers</h4>
                                 <p>
                                     Shop now
-                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <i className="fa-solid fa-arrow-right"></i>
                                 </p>
                             </div>
                         </div>

@@ -3,129 +3,116 @@ import { Col, Container, Row } from "react-bootstrap"
 import "./Header.css"
 
 const Header = () => {
-    const [menuActive, setMenuActive] = useState(false)
-    const [activeSearch, setActiveSearch] = useState(false)
-    const handlePopUpSearch = () => {
-        setActiveSearch(!activeSearch)
-    }
-    const handleMenu = (value) => {
-        setMenuActive(value)
-    }
+    const [resProdct, setResProdct] = useState(true)
+    const [resPage , setResPage] = useState(false)
+    const [resMenu, setResMenu] = useState(false)
+    
     return (
-        <Container fluid className="header">
-            <div className="thumb">
-                <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/Logo_white.png?v=1722670258&width=150" alt="" />
-            </div>
-            <div className="menu">
-                <ul className={`${menuActive ? "active" : ""}`}>
+        <>
+            <Container fluid className="header pt-4 pb-4 d-flex flex-row align-items-center justify-content-around">
+                <div className="logo d-flex">
+                    <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/Logo_white.png?v=1722670258&width=150" alt="" />
+                </div>
+                <ul className="menu d-flex gap-5 align-items-center m-0">
                     <li>Home</li>
                     <li className="products">
                         Products
-                        <Container fluid className="">
-                            <div className="sub-product">
-                                <Row>
-                                    <Col lg={6}>
-                                        <div className="left">
-                                            <Row>
-                                                <Col lg={6}>
-                                                    <div className="product-item">
-                                                        <div className="img-product">
-                                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-1_900x.jpg?v=1724640419" alt="" />
-                                                        </div>
-                                                        <div className="content-product">
-                                                            <h4 className="title">Gaming Mouse</h4>
-                                                            <div className="btn-shop">
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                                Shop Now
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className="product-item">
-                                                        <div className="img-product">
-                                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-2_900x.jpg?v=1724640419" alt="" />
-                                                        </div>
-                                                        <div className="content-product">
-                                                            <h4 className="title">Gaming Mouse</h4>
-                                                            <div className="btn-shop">
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                                Shop Now
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className="product-item">
-                                                        <div className="img-product">
-                                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-3_900x.jpg?v=1724640419" alt="" />
-                                                        </div>
-                                                        <div className="content-product">
-                                                            <h4 className="title">Gaming Mouse</h4>
-                                                            <div className="btn-shop">
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                                Shop Now
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className="product-item">
-                                                        <div className="img-product">
-                                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-4_900x.jpg?v=1724640419" alt="" />
-                                                        </div>
-                                                        <div className="content-product">
-                                                            <h4 className="title">Gaming Mouse</h4>
-                                                            <div className="btn-shop">
-                                                                <i class="fa-solid fa-arrow-right"></i>
-                                                                Shop Now
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                            </Row>
+                        <div className="cate-product">
+                            <Row className="pt-3 pb-3">
+                                <Col lg={6} className="d-flex align-items-center justify-content-center mt-4 mb-5">
+                                    <div className="product-item">
+                                        <div className="img-product">
+                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-1_900x.jpg?v=1724640419" alt="" />
                                         </div>
-                                    </Col>
-                                    <Col lg={6}>
-                                        <div className="right d-flex">
-                                            <div className="social">
-                                                <i class="fa-brands fa-facebook"></i>
-                                                <i class="fa-brands fa-instagram"></i>
-                                                <i class="fa-brands fa-twitter"></i>
-                                                <i class="fa-brands fa-twitch"></i>
-                                                <i class="fa-brands fa-x-twitter"></i>
+                                        <div className="content-product">
+                                            <h4 className="title mb-3">Gaming Mouse</h4>
+                                            <div className="btn-shop">
+                                                <i className="fa-solid fa-arrow-right"></i>
+                                                Shop Now
                                             </div>
-                                            <form action="" className="search">
-                                                <input type="text" placeholder="Enter Your Key Search" />
-                                                <i className="fa-solid fa-magnifying-glass"></i>
-                                            </form>
                                         </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Container>
+                                    </div>
+                                </Col>
+                                <Col lg={6} className="d-flex align-items-center justify-content-center mt-4 mb-5">
+                                    <div className="product-item">
+                                        <div className="img-product">
+                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-2_900x.jpg?v=1724640419" alt="" />
+                                        </div>
+                                        <div className="content-product">
+                                            <h4 className="title mb-3">Gaming Mouse</h4>
+                                            <div className="btn-shop">
+                                                <i className="fa-solid fa-arrow-right"></i>
+                                                Shop Now
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col lg={6} className="d-flex align-items-center justify-content-center mb-5">
+                                    <div className="product-item">
+                                        <div className="img-product">
+                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-3_900x.jpg?v=1724640419" alt="" />
+                                        </div>
+                                        <div className="content-product">
+                                            <h4 className="title mb-3">Gaming Mouse</h4>
+                                            <div className="btn-shop">
+                                                <i className="fa-solid fa-arrow-right"></i>
+                                                Shop Now
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col lg={6} className="d-flex align-items-center justify-content-center mb-5">
+                                    <div className="product-item">
+                                        <div className="img-product">
+                                            <img src="https://nov-gearnix.myshopify.com/cdn/shop/files/img-5-4_900x.jpg?v=1724640419" alt="" />
+                                        </div>
+                                        <div className="content-product">
+                                            <h4 className="title mb-3">Gaming Mouse</h4>
+                                            <div className="btn-shop">
+                                                <i className="fa-solid fa-arrow-right"></i>
+                                                Shop Now
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
                     </li>
                     <li>Contact Us</li>
                     <li>News</li>
-                    <li>
-                        <i class="fa-solid fa-xmark" onClick={() => handleMenu(false)}></i>
-                    </li>
                 </ul>
-            </div>
-            <div className="icon">
-                <i className="fa-solid fa-user"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-cart-shopping"></i>
-                <i className={`fa-solid ${activeSearch ? "fa-xmark" : "fa-magnifying-glass"}`} onClick={handlePopUpSearch}></i>
-                <i class="fa-solid fa-bars" onClick={() => handleMenu(true)}></i>
-            </div>
-            <div className={`search-popup ${activeSearch ? "active" : ""}`}>
-                <form action="" className="search">
-                    <input type="text" placeholder="Enter Your Key Search" />
+                <div className="btn-icon">
                     <i className="fa-solid fa-magnifying-glass"></i>
-                </form>
-            </div>
-        </Container>
+                    <i className="fa-solid fa-user"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-cart-shopping"></i>
+                    <i onClick={() => setResMenu(true)} className="fa-solid fa-bars"></i>
+                </div>
+                <div className="search-popup" style={{ display: "none" }}></div>
+                <div className={`menu-container ${resMenu ? "active" : ""}`}>
+                    <div className="close-btn" onClick={() => setResMenu(false)}>
+                        <i  className="fa-solid fa-xmark"></i>
+                    </div>
+                    <ul className={`res-menu ${resProdct ? "active" : ""}`}>
+                        <li>Home <span><i className="fa-solid fa-house"></i></span></li>
+                        <li onClick={() => setResProdct(!resProdct)}>Product 
+                            <span><i className="fa-solid fa-list"></i></span>
+                        </li>
+                        <li>Pages <span><i className="fa-solid fa-file-lines"></i></span></li>
+                        <li>Contact Us <span><i className="fa-solid fa-address-book"></i></span></li>
+                        <li>News <span><i className="fa-solid fa-newspaper"></i></span></li>
+                    </ul>
+                     <ul className={`sub-product p-0 mt-1 ${resProdct ? "": "active"}`}>
+                        <li onClick={() => setResProdct(!resProdct)}>Return <span><i className="fa-solid fa-arrow-rotate-left"></i></span></li>
+                        <li>Gaming Keyboard <span><i className="fa-solid fa-keyboard"></i></span></li>
+                        <li>Gaming Mouse <span><i className="fa-solid fa-computer-mouse"></i></span></li>
+                        <li>Gaming Headphone <span><i className="fa-solid fa-headphones"></i></span></li>
+                        <li>Gaming Console <span><i className="fa-solid fa-gamepad"></i></span></li>
+                    </ul>
+                     
+                </div>
+            </Container>
+        </>
     )
 }
 
